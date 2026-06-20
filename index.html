@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuerditos.cl | Pastelería y Dulces Artesanales Personalizados</title>
+  <meta name="description" content="Galletas decoradas, cuchuflís y tortas de cuchuflí personalizadas para cumpleaños, bautizos, baby showers y eventos corporativos. Hecho a mano con amor.">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Favicon placeholder (we use emoji for modern aesthetic) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧁</text></svg>">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">R</div>
+        <span class="logo-text">Recuerditos<span>.cl</span></span>
+      </a>
+      
+      <button class="nav-toggle" id="js-nav-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-menu" id="js-nav-menu">
+        <li><a href="#hero" class="nav-link">Inicio</a></li>
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        <li><a href="#contacto" class="btn btn-primary">Cotizar Evento</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="section-container hero-grid">
+      <div class="hero-content">
+        <h1>Dulces momentos que se quedan en el corazón</h1>
+        <p>Repostería artesanal y personalizada para celebrar y recordar los momentos más especiales de tu vida. Diseñamos con amor y horneamos bajo pedido.</p>
+        <div class="hero-ctas">
+          <a href="#contacto" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Cotizar mi Evento
+          </a>
+          <a href="#catalogo" class="btn btn-secondary">Ver el Catálogo</a>
+        </div>
+      </div>
+      <div class="hero-image-container">
+        <div class="hero-image-wrapper">
+          <img src="assets/hero_sweets.png" alt="Mesa dulce con tortas de cuchuflí, galletas decoradas y donas en tonos pastel">
+        </div>
+        <div class="hero-badge">
+          <span class="hero-badge-title">100% Artesanal</span>
+          <span class="hero-badge-subtitle">Hecho con amor</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about" id="nosotros">
+    <div class="section-container about-grid">
+      <div class="about-images">
+        <img src="assets/cookies_detail.png" alt="Galletas de mantequilla finamente decoradas con glaseado real" class="about-img">
+      </div>
+      <div class="about-text">
+        <h2>Hecho a mano, con amor y paciencia</h2>
+        <p>En recuerditos.cl creemos que cada celebración merece un detalle único. Por eso, horneamos y decoramos a mano cada una de nuestras galletas, donas y cuchuflís. No solo hacemos pastelería; creamos recuerdos dulces que tus invitados llevarán consigo.</p>
+        <p>Trabajamos de manera personalizada bajo pedido, adaptando los colores, temáticas y diseños al concepto de tu evento para lograr un resultado que sorprenda tanto a la vista como al paladar.</p>
+        
+        <div class="about-features">
+          <div class="feature-card">
+            <div class="feature-title">Personalización Total</div>
+            <div class="feature-desc">Elegimos los colores y personajes de acuerdo a tu celebración.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-title">Ingredientes Premium</div>
+            <div class="feature-desc">Elaboración artesanal con materia prima de excelente calidad.</div>
+          </div>
+        </div>
+        <a href="#contacto" class="btn btn-secondary">Conversar sobre mi idea</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog Section -->
+  <section class="catalog" id="catalogo">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Nuestro Catálogo de Dulzuras</h2>
+        <p class="section-subtitle">Haz clic en cada producto para conocer más detalles. Todo es personalizable.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="catalog-filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="galletas">Galletas Decoradas</button>
+        <button class="filter-btn" data-filter="cuchuflis">Cuchuflís y Tortas</button>
+        <button class="filter-btn" data-filter="donas">Mini Donas</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="catalog-grid" id="js-catalog-grid">
+        
+        <!-- Product 1 -->
+        <div class="product-card" data-category="galletas" 
+             data-details="Galletas de mantequilla y vainilla, horneadas con amor y decoradas individualmente a mano con glaseado real de alta definición. Ideales como recuerditos para bautizos, cumpleaños o regalos de agradecimiento. Se entregan en bolsitas individuales con cintas a tono."
+             data-image="assets/cookies_detail.png">
+          <div class="product-image-wrapper">
+            <img src="assets/cookies_detail.png" alt="Galletas decoradas con glaseado real" class="product-img">
+            <span class="product-category-tag">Galletas</span>
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">Galletas Decoradas Temáticas</h3>
+            <p class="product-desc">Galletas artesanales de mantequilla con diseños únicos y glaseados de alta precisión para tu evento.</p>
+            <div class="product-footer">
+              <span class="product-status">Bajo pedido</span>
+              <button class="btn-card-action js-view-details">Ver Detalles &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" data-category="cuchuflis" 
+             data-details="Nuestra gran especialidad. Una torta formada por decenas de crujientes y deliciosos cuchuflís rellenos con manjar casero, amarrados con una fina cinta de raso satinada del color que elijas. Está coronada en el centro por una galleta decorada gigante con la edad o la temática del festejado."
+             data-image="assets/cuchufli_detail.png">
+          <div class="product-image-wrapper">
+            <img src="assets/cuchufli_detail.png" alt="Torta de cuchuflí con topper de galleta" class="product-img">
+            <span class="product-category-tag">Cuchuflís</span>
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">Torta Especial de Cuchuflí</h3>
+            <p class="product-desc">Estructura festiva con cuchuflís artesanales rellenos de manjar y una galleta temática como decoración principal.</p>
+            <div class="product-footer">
+              <span class="product-status">Bajo pedido</span>
+              <button class="btn-card-action js-view-details">Ver Detalles &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card" data-category="donas" 
+             data-details="Pequeñas donitas horneadas (más ligeras y esponjosas que las fritas tradicionales) cubiertas de glaseados coloridos en tonos pastel, hilos de chocolate y decoraciones festivas. Se adaptan perfectamente a mesas de dulces de Baby Showers y cumpleaños infantiles."
+             data-image="assets/donuts_detail.png">
+          <div class="product-image-wrapper">
+            <img src="assets/donuts_detail.png" alt="Mini donas decoradas en tonos pastel" class="product-img">
+            <span class="product-category-tag">Mini Donas</span>
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">Mini Donas Glaseadas</h3>
+            <p class="product-desc">Pequeñas delicias horneadas, decoradas con coberturas de chocolate y sprinkles personalizados.</p>
+            <div class="product-footer">
+              <span class="product-status">Bajo pedido</span>
+              <button class="btn-card-action js-view-details">Ver Detalles &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card" data-category="cuchuflis" 
+             data-details="Bandejas listas para servir con crujientes barquillos de cuchuflí rellenos de manjar. Puedes pedirlos tradicionales espolvoreados con azúcar flor o bañados en chocolate de leche, chocolate blanco o chocolate semiamargo."
+             data-image="assets/hero_sweets.png">
+          <div class="product-image-wrapper">
+            <img src="assets/hero_sweets.png" alt="Cuchuflís tradicionales bañados" class="product-img">
+            <span class="product-category-tag">Cuchuflís</span>
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">Cuchuflís Tradicionales y Bañados</h3>
+            <p class="product-desc">Bandejas de barquillos rellenos con abundante manjar, con opción de cobertura de chocolate a tu gusto.</p>
+            <div class="product-footer">
+              <span class="product-status">Bajo pedido</span>
+              <button class="btn-card-action js-view-details">Ver Detalles &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works (Process) -->
+  <section class="process">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">¿Cómo encargar tus recuerditos?</h2>
+        <p class="section-subtitle">Hacer tu pedido personalizado es muy sencillo. Sigue estos tres pasos:</p>
+      </div>
+      
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-step">1</div>
+          <h3 class="process-title">Explora e Inspírate</h3>
+          <p class="process-desc">Revisa el catálogo y elige los productos y temáticas que sueñas para tu celebración. Puedes combinar colores y personajes.</p>
+        </div>
+        
+        <div class="process-card">
+          <div class="process-step">2</div>
+          <h3 class="process-title">Cotiza con Nosotros</h3>
+          <p class="process-desc">Completa el formulario de abajo o escríbenos directamente. Indícanos la fecha de tu evento, cantidades y la idea de diseño.</p>
+        </div>
+        
+        <div class="process-card">
+          <div class="process-step">3</div>
+          <h3 class="process-title">Disfruta tu Celebración</h3>
+          <p class="process-desc">Elaboramos tus productos bajo pedido para asegurar su frescura y los dejamos listos para que endulcen tu día especial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="section-container">
+      <div class="testimonial-slider">
+        <div class="testimonial-quote">
+          "Las galletas decoradas y la torta de cuchuflí fueron la sensación del baby shower de mi hija. No solo se veían hermosas y combinaban con la decoración, sino que estaban frescas y exquisitas. ¡Recomendado a ojos cerrados!"
+        </div>
+        <div class="testimonial-author">Carolina Mellado</div>
+        <div class="testimonial-tag">Mamá de Emilia • Baby Shower</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Cotizar Section -->
+  <section class="contact" id="contacto">
+    <div class="section-container contact-grid">
+      
+      <!-- Contact Info Card -->
+      <div class="contact-info">
+        <h3>¡Hagamos algo dulce juntos!</h3>
+        <p>Envíanos los detalles de tu evento para confirmar disponibilidad en la agenda y ayudarte a diseñar los recuerditos perfectos.</p>
+        
+        <div class="contact-channels">
+          <div class="channel">
+            <div class="channel-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="channel-details">
+              <h4>WhatsApp de Pedidos</h4>
+              <p>+56 9 8889 3336</p>
+            </div>
+          </div>
+
+          <div class="channel">
+            <div class="channel-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </div>
+            <div class="channel-details">
+              <h4>Instagram Oficial</h4>
+              <p>@recuerditos.cl</p>
+            </div>
+          </div>
+
+          <div class="channel">
+            <div class="channel-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+            </div>
+            <div class="channel-details">
+              <h4>Zona de Cobertura</h4>
+              <p>Despachos a coordinar / Retiro en Santiago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cotización Form -->
+      <div class="contact-form-container">
+        <form id="js-cotizar-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="form-nombre">Nombre Completo *</label>
+              <input type="text" id="form-nombre" class="form-control" placeholder="Ej. Antonia Paz" required>
+            </div>
+            <div class="form-group">
+              <label for="form-email">Correo Electrónico *</label>
+              <input type="email" id="form-email" class="form-control" placeholder="ejemplo@correo.com" required>
+            </div>
+            <div class="form-group">
+              <label for="form-fecha">Fecha del Evento *</label>
+              <input type="date" id="form-fecha" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="form-evento">Tipo de Evento</label>
+              <select id="form-evento" class="form-control">
+                <option value="Cumpleaños">Cumpleaños</option>
+                <option value="Baby Shower">Baby Shower</option>
+                <option value="Bautizo">Bautizo</option>
+                <option value="Matrimonio">Matrimonio</option>
+                <option value="Corporativo">Evento Corporativo</option>
+                <option value="Otro">Otro Evento</option>
+              </select>
+            </div>
+            <div class="form-group form-group-full">
+              <label>Productos que te interesan *</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="productos" value="Galletas Decoradas" class="js-prod-check">
+                  Galletas Decoradas
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="productos" value="Torta de Cuchuflí" class="js-prod-check">
+                  Torta de Cuchuflí
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="productos" value="Mini Donas" class="js-prod-check">
+                  Mini Donas
+                </label>
+              </div>
+            </div>
+            <div class="form-group form-group-full">
+              <label for="form-detalles">Cuéntanos tu idea (Temática, colores, cantidad estimada) *</label>
+              <textarea id="form-detalles" class="form-control" rows="4" placeholder="Ej. Necesito 30 galletas temáticas de ositos celestes y una torta de cuchuflí con topper..." required></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Enviar y Abrir WhatsApp
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>Recuerditos<span>.cl</span></h3>
+        <p>Haciendo tus celebraciones y eventos más dulces y memorables con repostería 100% personalizada.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contacto</h4>
+        <ul>
+          <li>WhatsApp: +56 9 8889 3336</li>
+          <li>Instagram: @recuerditos.cl</li>
+          <li>Santiago, Chile</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 recuerditos.cl. Todos los derechos reservados.</p>
+      <p>Hecho con amor y pastelería fina.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://api.whatsapp.com/send?phone=56988893336&text=Hola%20Recuerditos!%20Quisiera%20hacer%20una%20consulta." 
+     class="whatsapp-floating" target="_blank" rel="noopener noreferrer" aria-label="Contacto por WhatsApp">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  </a>
+
+  <!-- Product Details Modal -->
+  <div class="modal" id="js-product-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="js-modal-close" aria-label="Cerrar modal">&times;</button>
+      <div class="modal-body-grid">
+        <div class="modal-img-container">
+          <img src="" alt="" id="js-modal-image">
+        </div>
+        <div class="modal-info">
+          <span class="modal-category" id="js-modal-category">Categoría</span>
+          <h3 class="modal-title" id="js-modal-title">Título del Producto</h3>
+          <p class="modal-desc" id="js-modal-desc">Descripción del producto...</p>
+          <a href="" class="btn btn-primary" id="js-modal-cta" target="_blank" rel="noopener noreferrer">
+            Preguntar por este diseño
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript logic -->
+  <script src="js/main.js"></script>
+</body>
+</html>
