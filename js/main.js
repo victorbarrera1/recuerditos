@@ -109,6 +109,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- 4. FORMULARIO DE COTIZACIÓN + WHATSAPP ---
   const cotizarForm = document.getElementById('js-cotizar-form');
+  const fechaInput = document.getElementById('form-fecha');
+
+  if (fechaInput) {
+    // Establecer fecha mínima: Hoy + 3 días
+    const hoyMasTres = new Date();
+    hoyMasTres.setDate(hoyMasTres.getDate() + 3);
+    const yyyy = hoyMasTres.getFullYear();
+    const mm = String(hoyMasTres.getMonth() + 1).padStart(2, '0');
+    const dd = String(hoyMasTres.getDate()).padStart(2, '0');
+    fechaInput.min = `${yyyy}-${mm}-${dd}`;
+  }
 
   if (cotizarForm) {
     cotizarForm.addEventListener('submit', (e) => {
@@ -120,6 +131,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const fecha = document.getElementById('form-fecha').value;
       const evento = document.getElementById('form-evento').value;
       const detalles = document.getElementById('form-detalles').value.trim();
+
+      // Validar anticipación de 3 días (por si el navegador no soporta el atributo min)
+      if (fecha) {
+        const fechaSeleccionada = new Date(fecha + 'T00:00:00');
+        const hoyMasTres = new Date();
+        hoyMasTres.setDate(hoyMasTres.getDate() + 3);
+        hoyMasTres.setHours(0,0,0,0);
+
+        if (fechaSeleccionada < hoyMasTres) {
+          alert('Por favor, selecciona una fecha con al menos 3 días de anticipación para poder agendar tu pedido.');
+          return;
+        }
+      }
 
       // Recopilar productos seleccionados
       const productosCheckboxes = document.querySelectorAll('.js-prod-check:checked');
